@@ -186,7 +186,7 @@ void nand_write(unsigned int addr, unsigned char *buf, unsigned int len)
 		nand_addr_byte((col >> 8) & 0xff);
 
 		/* row/page addr */
-		nand_addr_byte(page * 0xff);
+		nand_addr_byte(page & 0xff);
 		nand_addr_byte((page >> 8) & 0xff);
 		nand_addr_byte((page >> 16) & 0xff);
 
